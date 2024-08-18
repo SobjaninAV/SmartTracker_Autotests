@@ -1,3 +1,2 @@
-cat .gitignore
-
 /.venv
+/.node_modules
