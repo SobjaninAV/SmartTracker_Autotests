@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-11T17:51:05.476928" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Automation" source="C:\Users\sobja\OneDrive\Документы\Robot_Automation">
+<suite id="s1-s1" name="Tests" source="C:\Users\sobja\OneDrive\Документы\Robot_Automation\tests">
+<suite id="s1-s1-s1" name="Onboarding" source="C:\Users\sobja\OneDrive\Документы\Robot_Automation\tests\onboarding">
+<suite id="s1-s1-s1-s1" name="Onboarding allow Location" source="C:\Users\sobja\OneDrive\Документы\Robot_Automation\tests\onboarding\Onboarding_allow_Location.robot">
+<kw name="Suite Setup" owner="common" type="SETUP">
+<kw name="Open app" owner="launcher">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=${CONNECTION_URL}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>udid=${UDID}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-08-11T17:51:05.788483" elapsed="4.109671"/>
+</kw>
+<status status="PASS" start="2024-08-11T17:51:05.787482" elapsed="4.111670"/>
+</kw>
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>seconds=20s</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-08-11T17:51:09.899152" elapsed="0.000000"/>
+</kw>
+<doc>Установка предусловий</doc>
+<status status="PASS" start="2024-08-11T17:51:05.786513" elapsed="4.112639"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Allow_Location_And_Notifications" line="9">
+<kw name="Allow Notification" owner="onboarding">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:11.005750" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<arg>${NOTIFICATION_ALLOW_BTN}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:09.903152" elapsed="1.103598"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:11.009749" level="INFO">Clicking element 'com.android.permissioncontroller:id/permission_allow_button'.</msg>
+<msg time="2024-08-11T17:51:11.072015" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<arg>${NOTIFICATION_ALLOW_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:11.006750" elapsed="0.065265"/>
+</kw>
+<doc>Разрешить уведомления</doc>
+<status status="PASS" start="2024-08-11T17:51:09.902150" elapsed="1.170868"/>
+</kw>
+<kw name="Allow Location" owner="onboarding">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:12.417203" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
+<arg>${ONBOARDING_SUBMIT_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:11.074016" elapsed="1.344186"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:12.421242" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk'.</msg>
+<msg time="2024-08-11T17:51:12.522312" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
+<arg>${ONBOARDING_SUBMIT_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:12.418202" elapsed="0.104110"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:12.819739" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<arg>${PERMISSION_FOREGROUND_ALLOW_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:12.523311" elapsed="0.297434"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:12.823738" level="INFO">Clicking element 'com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
+<msg time="2024-08-11T17:51:13.671524" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<arg>${PERMISSION_FOREGROUND_ALLOW_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:12.820745" elapsed="0.850779"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:15.299053" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk
+criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
+<arg>${ONBOARDING_SUBMIT_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:13.671524" elapsed="1.628584"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:15.304151" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk'.</msg>
+<msg time="2024-08-11T17:51:15.410854" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
+<arg>${ONBOARDING_SUBMIT_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:15.301117" elapsed="0.110745"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:16.746746" level="INFO">criteria is com.android.permissioncontroller:id/allow_always_radio_button</msg>
+<arg>${ALLOW_ALWAYS_RADIO_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:15.411862" elapsed="1.335883"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:16.750760" level="INFO">Clicking element 'com.android.permissioncontroller:id/allow_always_radio_button'.</msg>
+<msg time="2024-08-11T17:51:17.002007" level="INFO">criteria is com.android.permissioncontroller:id/allow_always_radio_button</msg>
+<arg>${ALLOW_ALWAYS_RADIO_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:16.747745" elapsed="0.255216"/>
+</kw>
+<doc>Разрешить геолокацию</doc>
+<status status="PASS" start="2024-08-11T17:51:11.073018" elapsed="5.929943"/>
+</kw>
+<kw name="Go Back" owner="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" start="2024-08-11T17:51:17.004006" elapsed="1.833441"/>
+</kw>
+<doc>Онбординг с разрешением уведомлений и геолокации</doc>
+<status status="PASS" start="2024-08-11T17:51:09.900153" elapsed="8.939019"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Passing_Instructions" line="17">
+<kw name="Pass Instructions" owner="onboarding">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:23.757738" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:18.845183" elapsed="4.913554"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:23.761735" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-08-11T17:51:23.958724" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:23.759738" elapsed="0.199977"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:24.621228" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:23.959715" elapsed="0.661513"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:24.625261" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-08-11T17:51:24.788284" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:24.622230" elapsed="0.167055"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:25.336080" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:24.789285" elapsed="0.546795"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:25.340027" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-08-11T17:51:25.506151" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:25.337030" elapsed="0.170116"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:26.156885" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:25.507146" elapsed="0.649739"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:26.159899" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-08-11T17:51:26.361712" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:26.157883" elapsed="0.203829"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:26.900934" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-11T17:51:26.362711" elapsed="0.538223"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-11T17:51:26.903942" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-08-11T17:51:27.093328" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<arg>${CONFIRM_EDUCATION_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-11T17:51:26.901930" elapsed="0.192355"/>
+</kw>
+<doc>Прохождение слайдов с обучением работе в приложении</doc>
+<status status="PASS" start="2024-08-11T17:51:18.844179" elapsed="8.250106"/>
+</kw>
+<doc>Прохождение слайдов с обучением работе в приложении</doc>
+<status status="PASS" start="2024-08-11T17:51:18.842179" elapsed="8.253101"/>
+</test>
+<kw name="Suite Teardown" owner="common" type="TEARDOWN">
+<kw name="Pass Execution" owner="BuiltIn">
+<msg time="2024-08-11T17:51:27.099277" level="INFO">Execution passed with message:
+Прогон завершен</msg>
+<arg>message=Прогон завершен</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="PASS" start="2024-08-11T17:51:27.099277" elapsed="0.001001">Прогон завершен</status>
+</kw>
+<doc>Установка постусловий</doc>
+<status status="PASS" start="2024-08-11T17:51:27.098280" elapsed="0.001998">Прогон завершен</status>
+</kw>
+<status status="PASS" start="2024-08-11T17:51:05.594820" elapsed="21.505458"/>
+</suite>
+<status status="PASS" start="2024-08-11T17:51:05.590816" elapsed="21.513559"/>
+</suite>
+<status status="PASS" start="2024-08-11T17:51:05.586587" elapsed="21.521698"/>
+</suite>
+<status status="PASS" start="2024-08-11T17:51:05.560587" elapsed="21.552697"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Robot Automation">Robot Automation</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Tests">Robot Automation.Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Onboarding">Robot Automation.Tests.Onboarding</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="Onboarding allow Location">Robot Automation.Tests.Onboarding.Onboarding allow Location</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
