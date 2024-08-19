@@ -1,34 +1,22 @@
 *** Settings ***
-Documentation    Подключение ресурсов
+Documentation    Ресурсы и предусловия
 Resource    authorization.resource
-Suite Setup    Launch App With Notifications And Geo
+Suite Setup    authorization.Precondition: At Authorizathion Form
 
 
 *** Test Cases ***
-Input Data And Authorize
-    [Documentation]    Заполнение полей пасспорта, пароля и авторизация
-    Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Text    ${PASSPORT_FLD}    text=5719946393
+Standart Authorization
+    [Documentation]    Ввод логина, пароля и нажатие на кнопку авторизации
 
-    Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Text    ${PASSWORD_FLD}    text=123456
+    authorization.Input Pasport Password And Authorize
 
-    Wait Until Element Is Visible    ${AUTHORIZATION_BTN}
-    Click Element    ${AUTHORIZATION_BTN}
+Allow Background Geolocation
+    [Documentation]    Разрешение отслеживания устройства в фоне
 
-Allow Geo At The Background Mode
-    [Documentation]    Разрешение на использование геолокации в фоне
-    Wait Until Element Is Visible    ${BACKGROUND_GEO_ACCESS_BTN}
-    Click Element    ${BACKGROUND_GEO_ACCESS_BTN}
+    authorization.Allow Geo At The Background Mode
 
-Pass Second Education
-    [Documentation]    Прохождение обучение работы с заявками
-    Wait Until Page Contains Element    ${EDUCATION_SCRN}
-    Click Element    ${EDUCATION_SCRN}
-    Click Element    ${EDUCATION_SCRN}
-    Click Element    ${EDUCATION_SCRN}
-    Click Element    ${EDUCATION_SCRN}
-    Click Element    ${EDUCATION_SCRN}
-    Click Element    ${EDUCATION_SCRN}
-    Click Element    ${EDUCATION_SCRN}
-    Wait Until Element Is Visible    locator=com.b2b_logist.smarttracker.develop:id/ivAllMenuNotifications
+Passing Secong Education
+    [Documentation]    Прохождение обучения работе с заявками
+
+    authorization.Pass Second Education
+    
