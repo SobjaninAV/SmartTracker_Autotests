@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation    Подключение локаторов
 Resource    Data/launcher.resource
 
 # Подключаем локаторы

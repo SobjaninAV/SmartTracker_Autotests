@@ -1,21 +1,20 @@
 *** Settings ***
 Documentation    Кейворды для экрана онбординга
-Resource    ../common.resource
+Resource    ../common.resource    # robotcode: ignore
+
 
 *** Keywords ***
-Allow_Location_And_Notifications
-    [Documentation]    Онбординг с разрешением уведомлений и геолокации
+Allow Location And Notifications
+    [Documentation]    Онбординг c разрешением уведомлений и геолокации
 
     Allow Notification
     Allow Location
     Go Back
-    
 
-Passing_Instructions
-    [Documentation]    Прохождение слайдов с обучением работе в приложении
-    
+Passing Instructions
+    [Documentation]    Прохождение слайдов c обучением работе в приложении
+
     Pass Instructions
-
 
 Allow Notification
     [Documentation]    Разрешить уведомления
@@ -26,7 +25,7 @@ Allow Notification
 Allow Location
     [Documentation]    Разрешить геолокацию
 
-   Wait Until Page Contains Element    ${ONBOARDING_SUBMIT_BTN}
+    Wait Until Page Contains Element    ${ONBOARDING_SUBMIT_BTN}
     Click Element    ${ONBOARDING_SUBMIT_BTN}
 
     Wait Until Page Contains Element    ${PERMISSION_FOREGROUND_ALLOW_BTN}
@@ -35,25 +34,23 @@ Allow Location
     Wait Until Page Contains Element    ${ONBOARDING_SUBMIT_BTN}
     Click Element    ${ONBOARDING_SUBMIT_BTN}
 
-    Wait Until Page Contains Element    ${ALLOW_ALWAYS_RADIO_BTN} 
-    Click Element    ${ALLOW_ALWAYS_RADIO_BTN} 
+    Wait Until Page Contains Element    ${ALLOW_ALWAYS_RADIO_BTN}
+    Click Element    ${ALLOW_ALWAYS_RADIO_BTN}
 
 Pass Instructions
-    [Documentation]    Прохождение слайдов с обучением работе в приложении
-    
+    [Documentation]    Прохождение слайдов c обучением работе в приложении
+
+    Wait Until Page Contains Element    ${CONFIRM_EDUCATION_BTN}
+    Click Element    ${CONFIRM_EDUCATION_BTN}
+
     Wait Until Page Contains Element    ${CONFIRM_EDUCATION_BTN}
     Click Element    ${CONFIRM_EDUCATION_BTN}
 
     Wait Until Page Contains Element    ${CONFIRM_EDUCATION_BTN}
     Click Element    ${CONFIRM_EDUCATION_BTN}
 
-    Wait Until Page Contains Element    ${CONFIRM_EDUCATION_BTN} 
-    Click Element    ${CONFIRM_EDUCATION_BTN}
-
-    Wait Until Page Contains Element    ${CONFIRM_EDUCATION_BTN} 
+    Wait Until Page Contains Element    ${CONFIRM_EDUCATION_BTN}
     Click Element    ${CONFIRM_EDUCATION_BTN}
 
     Wait Until Page Contains Element    ${CONFIRM_EDUCATION_BTN}
     Click Element    ${CONFIRM_EDUCATION_BTN}
-
-

@@ -1,19 +1,21 @@
 *** Settings ***
+Documentation    Подключение ресурсов
 Resource    ../core/all.resource
 Resource    onboarding/onboarding.resource
+
 
 *** Keywords ***
 Launch App With Notifications And Geo
     [Documentation]    Запустить приложение с принятием настроек уведомлений и геолокации
 
     Launch App
-    onboarding.Allow_Location_And_Notifications
-    onboarding.Passing_Instructions
-    
+    Allow Location And Notifications
+    Passing Instructions
+
 Launch App
     [Documentation]    Просто запустить приложение
 
-    launcher.Open app
+    launcher.Open App
 
 Close App
     [Documentation]    Просто закрыть приложение
@@ -23,9 +25,9 @@ Close App
 Suite Setup
     [Documentation]    Установка предусловий
 
-    launcher.Open app
+    launcher.Open App
     Set Appium Timeout    seconds=20s
-    
+
 Suite Teardown
     [Documentation]    Установка постусловий
 
