@@ -3,18 +3,25 @@ Documentation    Кейворды для экрана авторизации
 Resource    ../common.resource
 
 
+*** Variables ***
+${VALID_PASPORT}    5719946393
+${VALID_PASSWORD}    123456
+${INVALID_PASPORT}    5719946395
+${INVALID_PASSWORD}    1234567
+
+
 *** Keywords ***
 Precondition: At Authorizathion Form
     [Documentation]    Предусловие: на экране авторизации
     common.Launch App With Notifications And Geo
-    
+
 Input Pasport Password And Authorize
     [Documentation]    Заполнение полей пасспорта, пароля и авторизация
     Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Text    ${PASSPORT_FLD}    text=${valid_pasport}
+    Input Text    ${PASSPORT_FLD}    text=${VALID_PASPORT}
 
     Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Password    ${PASSWORD_FLD}    text=${valid_password}
+    Input Password    ${PASSWORD_FLD}    text=${VALID_PASSWORD}
 
     Wait Until Element Is Visible    ${AUTHORIZATION_BTN}
     Click Element    ${AUTHORIZATION_BTN}
@@ -35,10 +42,3 @@ Pass Second Education
     Click Element    ${EDUCATION_SCRN}
     Click Element    ${EDUCATION_SCRN}
     Wait Until Element Is Visible    locator=com.b2b_logist.smarttracker.develop:id/ivAllMenuNotifications
-
-
-*** Variables ***
-${valid_pasport}    5719946393
-${valid_password}    123456
-${invalid_pasport}    5719946395
-${invalid_password}    1234567

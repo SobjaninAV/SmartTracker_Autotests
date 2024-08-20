@@ -19,4 +19,3 @@ Passing Secong Education
     [Documentation]    Прохождение обучения работе с заявками
 
     authorization.Pass Second Education
-    
