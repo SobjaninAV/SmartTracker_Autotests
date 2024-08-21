@@ -4,8 +4,6 @@ Resource    ../common.resource
 
 
 *** Variables ***
-${VALID_PASPORT}    5719946393
-${VALID_PASSWORD}    123456
 ${INVALID_PASPORT}    5719946395
 ${INVALID_PASSWORD}    1234567
 
@@ -18,10 +16,10 @@ Precondition: At Authorizathion Form
 Input Pasport Password And Authorize
     [Documentation]    Заполнение полей пасспорта, пароля и авторизация
     Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Text    ${PASSPORT_FLD}    text=${VALID_PASPORT}
+    Input Text    ${PASSPORT_FLD}    text=%{VALID_PASPORT}
 
     Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Password    ${PASSWORD_FLD}    text=${VALID_PASSWORD}
+    Input Password    ${PASSWORD_FLD}    text=%{VALID_PASSWORD}
 
     Wait Until Element Is Visible    ${AUTHORIZATION_BTN}
     Click Element    ${AUTHORIZATION_BTN}
