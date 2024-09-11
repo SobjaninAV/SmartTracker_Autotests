@@ -3,6 +3,7 @@ Documentation    Подключение ресурсов
 Resource    ../core/all.resource
 Resource    onboarding/onboarding.resource
 Resource    profile/authorization.resource
+Resource    main_page/main_page.resource
 
 
 *** Keywords ***
