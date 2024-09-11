@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Кейворды для экрана авторизации
-Resource    ../common.resource
+Resource    ../common.resource    # robotcode: ignore
 
 
 *** Variables ***
@@ -40,3 +40,4 @@ Pass Second Education
     Click Element    ${EDUCATION_SCRN}
     Click Element    ${EDUCATION_SCRN}
     Wait Until Element Is Visible    locator=com.b2b_logist.smarttracker.develop:id/ivAllMenuNotifications
+

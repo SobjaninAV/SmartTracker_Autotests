@@ -2,6 +2,7 @@
 Documentation    Подключение ресурсов
 Resource    ../core/all.resource
 Resource    onboarding/onboarding.resource
+Resource    profile/authorization.resource
 
 
 *** Keywords ***
@@ -32,3 +33,9 @@ Suite Teardown
     [Documentation]    Установка постусловий
 
     Pass Execution    message=Прогон завершен
+
+Passing to the main page
+    [Documentation]    Главный экран после первичной авторизации
+    Input Pasport Password And Authorize
+    Allow Geo At The Background Mode
+    Pass Second Education
