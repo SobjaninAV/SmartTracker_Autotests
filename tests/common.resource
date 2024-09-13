@@ -12,6 +12,7 @@ Launch App With Notifications And Geo
 
     Launch App
     Allow Location And Notifications
+    Turn On Geolocation
     Passing Instructions
 
 Launch App

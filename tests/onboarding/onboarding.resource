@@ -11,6 +11,15 @@ Allow Location And Notifications
     Allow Location
     Go Back
 
+Turn On Geolocation
+    [Documentation]    Включение геолокации
+    Sleep    time_=2
+    ${element_present}=    Run Keyword And Return Status    Element Should Be Visible    ${GEOLOCATION_TURN_ON_SCRN}
+    Run Keyword If    ${element_present}    Click Element    ${GEOLOCATION_TURN_ON_SWCH}
+    Run Keyword If    ${element_present}    Go back
+    ${element_present}=    Run Keyword And Return Status    Page Should Not Contain Element    ${GEOLOCATION_TURN_ON_SCRN}
+    Run Keyword If    ${element_present}    No Operation
+
 Passing Instructions
     [Documentation]    Прохождение слайдов c обучением работе в приложении
 

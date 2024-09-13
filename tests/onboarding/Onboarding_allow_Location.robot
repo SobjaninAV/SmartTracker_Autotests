@@ -15,6 +15,11 @@ Allow_Location_And_Notifications
     onboarding.Allow Location
     Go Back
 
+Turn On Geolocation
+    [Documentation]    Включение геолокации
+    
+    Turn On Geolocation
+
 Passing_Instructions
     [Documentation]    Прохождение слайдов с обучением работе в приложении
 

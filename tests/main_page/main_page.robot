@@ -5,17 +5,18 @@ Suite Setup    Precondition: Main Page
 
 
 *** Test Cases ***
-View orders in work
+Generate Random Variables
+    [Documentation]     Генерируем ФИО
+    Generate Random Variables
+
+Open orders in work
     [Documentation]     Посмотреть заказы в работе
-    Wait Until Element Is Visible    ${ORDERS_IN_WORK_LAYOUT}
-    Click Element    ${ORDERS_IN_WORK_LAYOUT}
+    Open orders in work
 
-View new orders
+Open new orders
     [Documentation]     Посмотреть новые заказы
-    Wait Until Element Is Visible    ${NEW_ORDERS_LAYOUT}
-    Click Element    ${NEW_ORDERS_LAYOUT}
+    Open new orders
 
-View new orders
+Open main menu
     [Documentation]     Нажать на кнопку главного меню
-    Wait Until Element Is Visible    ${MAIN_MENU_BTN}
-    Click Element    ${MAIN_MENU_BTN}
+    Open main menu

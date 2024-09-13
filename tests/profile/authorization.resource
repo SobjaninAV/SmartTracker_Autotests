@@ -40,4 +40,3 @@ Pass Second Education
     Click Element    ${EDUCATION_SCRN}
     Click Element    ${EDUCATION_SCRN}
     Wait Until Element Is Visible    locator=com.b2b_logist.smarttracker.develop:id/ivAllMenuNotifications
-

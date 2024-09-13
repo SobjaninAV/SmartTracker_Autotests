@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-11T18:17:27.751752" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-13T11:25:18.865153" rpa="false" schemaversion="5">
 <suite id="s1" name="SmartTracker Autotests" source="C:\Users\sobja\OneDrive\Документы\SmartTracker_Autotests">
 <suite id="s1-s1" name="Tests" source="C:\Users\sobja\OneDrive\Документы\SmartTracker_Autotests\tests">
-<suite id="s1-s1-s1" name="Main Page" source="C:\Users\sobja\OneDrive\Документы\SmartTracker_Autotests\tests\main_page">
-<suite id="s1-s1-s1-s1" name="Main Page" source="C:\Users\sobja\OneDrive\Документы\SmartTracker_Autotests\tests\main_page\main_page.robot">
-<kw name="Precondition: Main Page" owner="main_page" type="SETUP">
+<suite id="s1-s1-s1" name="Profile" source="C:\Users\sobja\OneDrive\Документы\SmartTracker_Autotests\tests\profile">
+<suite id="s1-s1-s1-s1" name="Authorization" source="C:\Users\sobja\OneDrive\Документы\SmartTracker_Autotests\tests\profile\authorization.robot">
+<kw name="Precondition: At Authorizathion Form" owner="authorization" type="SETUP">
 <kw name="Launch App With Notifications And Geo" owner="common">
 <kw name="Launch App" owner="common">
 <kw name="Open app" owner="launcher">
@@ -24,99 +24,174 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-09-11T18:17:28.215233" elapsed="4.094353"/>
+<status status="PASS" start="2024-09-13T11:25:19.241388" elapsed="5.198347"/>
 </kw>
-<status status="PASS" start="2024-09-11T18:17:28.214195" elapsed="4.095391"/>
+<status status="PASS" start="2024-09-13T11:25:19.241388" elapsed="5.199393"/>
 </kw>
 <doc>Просто запустить приложение</doc>
-<status status="PASS" start="2024-09-11T18:17:28.213266" elapsed="4.096320"/>
+<status status="PASS" start="2024-09-13T11:25:19.240392" elapsed="5.200389"/>
 </kw>
 <kw name="Allow Location And Notifications" owner="onboarding">
 <kw name="Allow Notification" owner="onboarding">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:32.936342" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<msg time="2024-09-13T11:25:25.631898" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
 <arg>${NOTIFICATION_ALLOW_BTN}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:32.311623" elapsed="0.624719"/>
+<status status="PASS" start="2024-09-13T11:25:24.441836" elapsed="1.191088"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:32.941388" level="INFO">Clicking element 'com.android.permissioncontroller:id/permission_allow_button'.</msg>
-<msg time="2024-09-11T18:17:33.000469" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<msg time="2024-09-13T11:25:25.637928" level="INFO">Clicking element 'com.android.permissioncontroller:id/permission_allow_button'.</msg>
+<msg time="2024-09-13T11:25:27.020808" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
 <arg>${NOTIFICATION_ALLOW_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:32.937345" elapsed="0.064123"/>
+<status status="PASS" start="2024-09-13T11:25:25.633889" elapsed="1.386919"/>
 </kw>
 <doc>Разрешить уведомления</doc>
-<status status="PASS" start="2024-09-11T18:17:32.310633" elapsed="0.690835"/>
+<status status="PASS" start="2024-09-13T11:25:24.440781" elapsed="2.581077"/>
 </kw>
 <kw name="Allow Location" owner="onboarding">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:34.335896" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
+<msg time="2024-09-13T11:25:27.646047" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
 <arg>${ONBOARDING_SUBMIT_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:33.003450" elapsed="1.333399"/>
+<status status="PASS" start="2024-09-13T11:25:27.023399" elapsed="0.623645"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:34.339853" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk'.</msg>
-<msg time="2024-09-11T18:17:34.428288" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
+<msg time="2024-09-13T11:25:27.651027" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk'.</msg>
+<msg time="2024-09-13T11:25:27.750519" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
 <arg>${ONBOARDING_SUBMIT_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:34.336849" elapsed="0.091439"/>
+<status status="PASS" start="2024-09-13T11:25:27.648040" elapsed="0.102479"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:34.716633" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<msg time="2024-09-13T11:25:28.032915" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
 <arg>${PERMISSION_FOREGROUND_ALLOW_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:34.428288" elapsed="0.288345"/>
+<status status="PASS" start="2024-09-13T11:25:27.750519" elapsed="0.283431"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:34.721932" level="INFO">Clicking element 'com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
-<msg time="2024-09-11T18:17:35.557236" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<msg time="2024-09-13T11:25:28.037951" level="INFO">Clicking element 'com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
+<msg time="2024-09-13T11:25:30.643756" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
 <arg>${PERMISSION_FOREGROUND_ALLOW_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:34.716633" elapsed="0.840603"/>
+<status status="PASS" start="2024-09-13T11:25:28.033950" elapsed="2.610758"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:36.909270" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
+<msg time="2024-09-13T11:25:30.703505" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
 <arg>${ONBOARDING_SUBMIT_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:35.558282" elapsed="1.351963"/>
+<status status="PASS" start="2024-09-13T11:25:30.645704" elapsed="0.057801"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:36.914292" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk'.</msg>
-<msg time="2024-09-11T18:17:37.009757" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
+<msg time="2024-09-13T11:25:30.706477" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk'.</msg>
+<msg time="2024-09-13T11:25:30.853618" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnSplashPermissionOk</msg>
 <arg>${ONBOARDING_SUBMIT_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:36.910245" elapsed="0.100466"/>
+<status status="PASS" start="2024-09-13T11:25:30.704487" elapsed="0.150165"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:38.314719" level="INFO">criteria is com.android.permissioncontroller:id/allow_always_radio_button</msg>
+<msg time="2024-09-13T11:25:32.156304" level="INFO">criteria is com.android.permissioncontroller:id/allow_always_radio_button</msg>
 <arg>${ALLOW_ALWAYS_RADIO_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:37.010711" elapsed="1.304008"/>
+<status status="PASS" start="2024-09-13T11:25:30.854652" elapsed="1.302659"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:38.318778" level="INFO">Clicking element 'com.android.permissioncontroller:id/allow_always_radio_button'.</msg>
-<msg time="2024-09-11T18:17:38.524963" level="INFO">criteria is com.android.permissioncontroller:id/allow_always_radio_button</msg>
+<msg time="2024-09-13T11:25:32.161300" level="INFO">Clicking element 'com.android.permissioncontroller:id/allow_always_radio_button'.</msg>
+<msg time="2024-09-13T11:25:32.947523" level="INFO">criteria is com.android.permissioncontroller:id/allow_always_radio_button</msg>
 <arg>${ALLOW_ALWAYS_RADIO_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:38.315725" elapsed="0.209238"/>
+<status status="PASS" start="2024-09-13T11:25:32.157311" elapsed="0.792170"/>
 </kw>
 <doc>Разрешить геолокацию</doc>
-<status status="PASS" start="2024-09-11T18:17:33.001468" elapsed="5.524533"/>
+<status status="PASS" start="2024-09-13T11:25:27.021858" elapsed="5.927623"/>
 </kw>
 <kw name="Go Back" owner="AppiumLibrary">
 <doc>Goes one step backward in the browser history.</doc>
-<status status="PASS" start="2024-09-11T18:17:38.526001" elapsed="1.552904"/>
+<status status="PASS" start="2024-09-13T11:25:32.949481" elapsed="0.971038"/>
 </kw>
 <doc>Онбординг c разрешением уведомлений и геолокации</doc>
-<status status="PASS" start="2024-09-11T18:17:32.309586" elapsed="7.769319"/>
+<status status="PASS" start="2024-09-13T11:25:24.440781" elapsed="9.480712"/>
+</kw>
+<kw name="Turn On Geolocation" owner="onboarding">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-13T11:25:35.924034" level="INFO">Slept 2 seconds.</msg>
+<arg>time_=2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-13T11:25:33.922468" elapsed="2.001566"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-09-13T11:25:36.293641" level="INFO">xpath criteria: //android.widget.FrameLayout[@content-desc="МЕСТОПОЛОЖЕНИЕ"]</msg>
+<arg>${GEOLOCATION_TURN_ON_SCRN}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-09-13T11:25:35.926057" elapsed="0.367584"/>
+</kw>
+<msg time="2024-09-13T11:25:36.294670" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${GEOLOCATION_TURN_ON_SCRN}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-13T11:25:35.925056" elapsed="0.369614"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-09-13T11:25:36.298623" level="INFO">Clicking element '//android.widget.Switch[@resource-id="android:id/switch_widget"]'.</msg>
+<msg time="2024-09-13T11:25:36.456600" level="INFO">xpath criteria: //android.widget.Switch[@resource-id="android:id/switch_widget"]</msg>
+<arg>${GEOLOCATION_TURN_ON_SWCH}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-09-13T11:25:36.296648" elapsed="0.160949"/>
+</kw>
+<arg>${element_present}</arg>
+<arg>Click Element</arg>
+<arg>${GEOLOCATION_TURN_ON_SWCH}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-13T11:25:36.294670" elapsed="0.162927"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Go Back" owner="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" start="2024-09-13T11:25:36.459589" elapsed="1.822498"/>
+</kw>
+<arg>${element_present}</arg>
+<arg>Go back</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-13T11:25:36.458593" elapsed="1.824479"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Not Contain Element" owner="AppiumLibrary">
+<msg time="2024-09-13T11:25:38.742273" level="INFO">Current page not contains element '//android.widget.FrameLayout[@content-desc="МЕСТОПОЛОЖЕНИЕ"]'.</msg>
+<msg time="2024-09-13T11:25:38.742273" level="INFO">xpath criteria: //android.widget.FrameLayout[@content-desc="МЕСТОПОЛОЖЕНИЕ"]</msg>
+<arg>${GEOLOCATION_TURN_ON_SCRN}</arg>
+<doc>Verifies that current page not contains `locator` element.</doc>
+<status status="PASS" start="2024-09-13T11:25:38.284118" elapsed="0.458155"/>
+</kw>
+<msg time="2024-09-13T11:25:38.743269" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Page Should Not Contain Element</arg>
+<arg>${GEOLOCATION_TURN_ON_SCRN}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-13T11:25:38.283072" elapsed="0.460197"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="No Operation" owner="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" start="2024-09-13T11:25:38.744351" elapsed="0.000876"/>
+</kw>
+<arg>${element_present}</arg>
+<arg>No Operation</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-13T11:25:38.743269" elapsed="0.001958"/>
+</kw>
+<doc>Включение геолокации</doc>
+<status status="PASS" start="2024-09-13T11:25:33.922468" elapsed="4.822759"/>
 </kw>
 <kw name="Passing Instructions" owner="onboarding">
 <kw name="Pass Instructions" owner="onboarding">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:45.236655" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+<msg time="2024-09-13T11:25:43.746221" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
+criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
 criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
 criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
 criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
@@ -133,271 +208,243 @@ criteria is com.b2b_logist.smarttracker.develop:id/btnInfo
 criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:40.081883" elapsed="5.155774"/>
+<status status="PASS" start="2024-09-13T11:25:38.747233" elapsed="4.999988"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:45.242654" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
-<msg time="2024-09-11T18:17:45.427578" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:43.752249" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-09-13T11:25:43.914245" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:45.238656" elapsed="0.189946"/>
+<status status="PASS" start="2024-09-13T11:25:43.747221" elapsed="0.168027"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:46.091341" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:44.570768" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:45.428602" elapsed="0.663745"/>
+<status status="PASS" start="2024-09-13T11:25:43.915248" elapsed="0.656516"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:46.096345" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
-<msg time="2024-09-11T18:17:46.201170" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:44.575756" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-09-13T11:25:44.738832" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:46.092347" elapsed="0.108823"/>
+<status status="PASS" start="2024-09-13T11:25:44.571764" elapsed="0.168024"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:46.749680" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:45.275954" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:46.202208" elapsed="0.548494"/>
+<status status="PASS" start="2024-09-13T11:25:44.739788" elapsed="0.536166"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:46.754679" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
-<msg time="2024-09-11T18:17:46.895529" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:45.279890" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-09-13T11:25:45.432582" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:46.750702" elapsed="0.145779"/>
+<status status="PASS" start="2024-09-13T11:25:45.276947" elapsed="0.156688"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:47.799275" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:46.072799" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:46.897533" elapsed="0.901742"/>
+<status status="PASS" start="2024-09-13T11:25:45.433635" elapsed="0.639164"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:47.803316" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
-<msg time="2024-09-11T18:17:47.936654" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:46.074828" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-09-13T11:25:46.223626" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:47.800309" elapsed="0.137274"/>
+<status status="PASS" start="2024-09-13T11:25:46.072799" elapsed="0.150827"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:48.491289" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:46.769909" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:47.938583" elapsed="0.553708"/>
+<status status="PASS" start="2024-09-13T11:25:46.223626" elapsed="0.547275"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:48.496289" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
-<msg time="2024-09-11T18:17:48.649844" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
+<msg time="2024-09-13T11:25:46.774940" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnInfo'.</msg>
+<msg time="2024-09-13T11:25:47.764891" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnInfo</msg>
 <arg>${CONFIRM_EDUCATION_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:48.492291" elapsed="0.157553"/>
+<status status="PASS" start="2024-09-13T11:25:46.770901" elapsed="0.994943"/>
 </kw>
 <doc>Прохождение слайдов c обучением работе в приложении</doc>
-<status status="PASS" start="2024-09-11T18:17:40.080883" elapsed="8.570010"/>
+<status status="PASS" start="2024-09-13T11:25:38.746223" elapsed="9.019621"/>
 </kw>
 <doc>Прохождение слайдов c обучением работе в приложении</doc>
-<status status="PASS" start="2024-09-11T18:17:40.079884" elapsed="8.571009"/>
+<status status="PASS" start="2024-09-13T11:25:38.745227" elapsed="9.021613"/>
 </kw>
 <doc>Запустить приложение с принятием настроек уведомлений и геолокации</doc>
-<status status="PASS" start="2024-09-11T18:17:28.212198" elapsed="20.438695"/>
+<status status="PASS" start="2024-09-13T11:25:19.239395" elapsed="28.527445"/>
 </kw>
-<kw name="Passing to the main page" owner="common">
+<doc>Предусловие: на экране авторизации</doc>
+<status status="PASS" start="2024-09-13T11:25:19.238398" elapsed="28.528442"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Standart Authorization" line="8">
 <kw name="Input Pasport Password And Authorize" owner="authorization">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:49.356843" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/etAuthorizationPassport</msg>
+<msg time="2024-09-13T11:25:47.904479" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/etAuthorizationPassport</msg>
 <arg>${PASSPORT_FLD}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-09-11T18:17:48.653845" elapsed="0.703968"/>
+<status status="PASS" start="2024-09-13T11:25:47.771696" elapsed="0.132783"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:49.360807" level="INFO">Typing text '5719946393' into text field 'com.b2b_logist.smarttracker.develop:id/etAuthorizationPassport'</msg>
-<msg time="2024-09-11T18:17:49.983630" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/etAuthorizationPassport</msg>
+<msg time="2024-09-13T11:25:47.907392" level="INFO">Typing text '5719946393' into text field 'com.b2b_logist.smarttracker.develop:id/etAuthorizationPassport'</msg>
+<msg time="2024-09-13T11:25:48.786295" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/etAuthorizationPassport</msg>
 <arg>${PASSPORT_FLD}</arg>
 <arg>text=%{VALID_PASPORT}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:49.357813" elapsed="0.625817"/>
+<status status="PASS" start="2024-09-13T11:25:47.905442" elapsed="0.881848"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:50.586406" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/etAuthorizationPassport</msg>
+<msg time="2024-09-13T11:25:49.792578" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/etAuthorizationPassport</msg>
 <arg>${PASSPORT_FLD}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-09-11T18:17:49.984684" elapsed="0.602681"/>
+<status status="PASS" start="2024-09-13T11:25:48.787290" elapsed="1.005288"/>
 </kw>
 <kw name="Input Password" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:50.590363" level="INFO">Typing password into text field 'com.b2b_logist.smarttracker.develop:id/etAuthorizationPassword'</msg>
-<msg time="2024-09-11T18:17:51.201859" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/etAuthorizationPassword</msg>
+<msg time="2024-09-13T11:25:49.795564" level="INFO">Typing password into text field 'com.b2b_logist.smarttracker.develop:id/etAuthorizationPassword'</msg>
+<msg time="2024-09-13T11:25:50.497349" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/etAuthorizationPassword</msg>
 <arg>${PASSWORD_FLD}</arg>
 <arg>text=%{VALID_PASSWORD}</arg>
 <doc>Types the given password into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:50.587365" elapsed="0.614494"/>
+<status status="PASS" start="2024-09-13T11:25:49.792578" elapsed="0.705770"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:51.804466" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorization</msg>
+<msg time="2024-09-13T11:25:51.132605" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorization</msg>
 <arg>${AUTHORIZATION_BTN}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-09-11T18:17:51.202831" elapsed="0.602636"/>
+<status status="PASS" start="2024-09-13T11:25:50.498348" elapsed="0.634257"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:51.809466" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnAuthorization'.</msg>
-<msg time="2024-09-11T18:17:52.025010" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorization</msg>
+<msg time="2024-09-13T11:25:51.136597" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnAuthorization'.</msg>
+<msg time="2024-09-13T11:25:51.308550" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorization</msg>
 <arg>${AUTHORIZATION_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:51.805467" elapsed="0.220499"/>
+<status status="PASS" start="2024-09-13T11:25:51.133603" elapsed="0.174947"/>
 </kw>
 <doc>Заполнение полей пасспорта, пароля и авторизация</doc>
-<status status="PASS" start="2024-09-11T18:17:48.652844" elapsed="3.373122"/>
+<status status="PASS" start="2024-09-13T11:25:47.770700" elapsed="3.537850"/>
 </kw>
+<doc>Ввод логина, пароля и нажатие на кнопку авторизации</doc>
+<status status="PASS" start="2024-09-13T11:25:47.767837" elapsed="3.541732"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Allow Background Geolocation" line="13">
 <kw name="Allow Geo At The Background Mode" owner="authorization">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:53.753222" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorizationPermissionOk
+<msg time="2024-09-13T11:25:53.415840" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorizationPermissionOk
+criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorizationPermissionOk
 criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorizationPermissionOk</msg>
 <arg>${BACKGROUND_GEO_ACCESS_BTN}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-09-11T18:17:52.028019" elapsed="1.725203"/>
+<status status="PASS" start="2024-09-13T11:25:51.314523" elapsed="2.102274"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:53.755220" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnAuthorizationPermissionOk'.</msg>
-<msg time="2024-09-11T18:17:53.877728" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorizationPermissionOk</msg>
+<msg time="2024-09-13T11:25:53.419808" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/btnAuthorizationPermissionOk'.</msg>
+<msg time="2024-09-13T11:25:53.557018" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/btnAuthorizationPermissionOk</msg>
 <arg>${BACKGROUND_GEO_ACCESS_BTN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:53.753222" elapsed="0.125508"/>
+<status status="PASS" start="2024-09-13T11:25:53.416797" elapsed="0.140221"/>
 </kw>
 <doc>Разрешение на использование геолокации в фоне</doc>
-<status status="PASS" start="2024-09-11T18:17:52.026973" elapsed="1.851757"/>
+<status status="PASS" start="2024-09-13T11:25:51.313564" elapsed="2.243454"/>
 </kw>
+<doc>Разрешение отслеживания устройства в фоне</doc>
+<status status="PASS" start="2024-09-13T11:25:51.311531" elapsed="2.247483"/>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Passing Secong Education" line="18">
 <kw name="Pass Second Education" owner="authorization">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:56.490091" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial
-criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial
-criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial
-criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial
+<msg time="2024-09-13T11:25:56.396371" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial
 criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial
 criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial
 criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
 <arg>${EDUCATION_SCRN}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-09-11T18:17:53.880730" elapsed="2.610362"/>
+<status status="PASS" start="2024-09-13T11:25:53.564004" elapsed="2.833323"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:56.496091" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
-<msg time="2024-09-11T18:17:56.620979" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
+<msg time="2024-09-13T11:25:56.401328" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
+<msg time="2024-09-13T11:25:56.513820" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
 <arg>${EDUCATION_SCRN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:56.491092" elapsed="0.131838"/>
+<status status="PASS" start="2024-09-13T11:25:56.398322" elapsed="0.116469"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:56.625927" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
-<msg time="2024-09-11T18:17:57.183780" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
+<msg time="2024-09-13T11:25:56.517766" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
+<msg time="2024-09-13T11:25:57.124319" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
 <arg>${EDUCATION_SCRN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:56.622930" elapsed="0.561842"/>
+<status status="PASS" start="2024-09-13T11:25:56.514791" elapsed="0.610526"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:57.188771" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
-<msg time="2024-09-11T18:17:57.751621" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
+<msg time="2024-09-13T11:25:57.128359" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
+<msg time="2024-09-13T11:25:57.695935" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
 <arg>${EDUCATION_SCRN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:57.184772" elapsed="0.567813"/>
+<status status="PASS" start="2024-09-13T11:25:57.126314" elapsed="0.570628"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:57.757663" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
-<msg time="2024-09-11T18:17:58.880622" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
+<msg time="2024-09-13T11:25:57.700912" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
+<msg time="2024-09-13T11:25:58.858990" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
 <arg>${EDUCATION_SCRN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:57.753584" elapsed="1.128040"/>
+<status status="PASS" start="2024-09-13T11:25:57.696942" elapsed="1.162048"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:58.885664" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
-<msg time="2024-09-11T18:17:59.512633" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
+<msg time="2024-09-13T11:25:58.861983" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
+<msg time="2024-09-13T11:25:58.995983" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
 <arg>${EDUCATION_SCRN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:58.881624" elapsed="0.631952"/>
+<status status="PASS" start="2024-09-13T11:25:58.858990" elapsed="0.137969"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:17:59.518665" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
-<msg time="2024-09-11T18:18:01.204585" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
+<msg time="2024-09-13T11:25:58.999970" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
+<msg time="2024-09-13T11:25:59.611460" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
 <arg>${EDUCATION_SCRN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:17:59.514563" elapsed="1.691067"/>
+<status status="PASS" start="2024-09-13T11:25:58.996959" elapsed="0.614501"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:18:01.209620" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
-<msg time="2024-09-11T18:18:02.862432" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
+<msg time="2024-09-13T11:25:59.614454" level="INFO">Clicking element 'com.b2b_logist.smarttracker.develop:id/ivTutorial'.</msg>
+<msg time="2024-09-13T11:26:01.154372" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivTutorial</msg>
 <arg>${EDUCATION_SCRN}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:18:01.206623" elapsed="1.656833"/>
+<status status="PASS" start="2024-09-13T11:25:59.611460" elapsed="1.543900"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-09-11T18:18:03.051401" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivAllMenuNotifications</msg>
+<msg time="2024-09-13T11:26:01.307868" level="INFO">criteria is com.b2b_logist.smarttracker.develop:id/ivAllMenuNotifications</msg>
 <arg>locator=com.b2b_logist.smarttracker.develop:id/ivAllMenuNotifications</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-09-11T18:18:02.863456" elapsed="0.187945"/>
+<status status="PASS" start="2024-09-13T11:26:01.155360" elapsed="0.152508"/>
 </kw>
 <doc>Прохождение обучение работы с заявками</doc>
-<status status="PASS" start="2024-09-11T18:17:53.879790" elapsed="9.171611"/>
+<status status="PASS" start="2024-09-13T11:25:53.562998" elapsed="7.745866"/>
 </kw>
-<doc>Главный экран после первичной авторизации</doc>
-<status status="PASS" start="2024-09-11T18:17:48.651885" elapsed="14.400750"/>
-</kw>
-<doc>Предусловие: на главном экране</doc>
-<status status="PASS" start="2024-09-11T18:17:28.211302" elapsed="34.841333"/>
-</kw>
-<test id="s1-s1-s1-s1-t1" name="View orders in work" line="8">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-09-11T18:18:03.868195" level="INFO">xpath criteria: //android.widget.TextView[contains(@text, 'В РАБОТЕ')]</msg>
-<arg>${ORDERS_IN_WORK_LAYOUT}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-09-11T18:18:03.054595" elapsed="0.813600"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:18:03.873192" level="INFO">Clicking element '//android.widget.TextView[contains(@text, 'В РАБОТЕ')]'.</msg>
-<msg time="2024-09-11T18:18:04.070099" level="INFO">xpath criteria: //android.widget.TextView[contains(@text, 'В РАБОТЕ')]</msg>
-<arg>${ORDERS_IN_WORK_LAYOUT}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:18:03.870193" elapsed="0.199906"/>
-</kw>
-<doc>Посмотреть заказы в работе</doc>
-<status status="PASS" start="2024-09-11T18:18:03.052635" elapsed="1.019422"/>
-</test>
-<test id="s1-s1-s1-s1-t2" name="View new orders" line="13">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-09-11T18:18:04.893553" level="INFO">xpath criteria: //android.widget.TextView[contains(@text, 'НОВЫЕ')]</msg>
-<arg>${NEW_ORDERS_LAYOUT}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-09-11T18:18:04.076055" elapsed="0.817498"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-09-11T18:18:04.898548" level="INFO">Clicking element '//android.widget.TextView[contains(@text, 'НОВЫЕ')]'.</msg>
-<msg time="2024-09-11T18:18:05.960978" level="INFO">xpath criteria: //android.widget.TextView[contains(@text, 'НОВЫЕ')]</msg>
-<arg>${NEW_ORDERS_LAYOUT}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-09-11T18:18:04.895552" elapsed="1.066425"/>
-</kw>
-<doc>Посмотреть новые заказы</doc>
-<status status="PASS" start="2024-09-11T18:18:04.074055" elapsed="1.889703"/>
+<doc>Прохождение обучения работе с заявками</doc>
+<status status="PASS" start="2024-09-13T11:25:53.561006" elapsed="7.748853"/>
 </test>
 <doc>Ресурсы и предусловия</doc>
-<status status="PASS" start="2024-09-11T18:17:27.868573" elapsed="38.099175"/>
+<status status="PASS" start="2024-09-13T11:25:18.907069" elapsed="42.404782"/>
 </suite>
-<status status="PASS" start="2024-09-11T18:17:27.865574" elapsed="38.106174"/>
+<status status="PASS" start="2024-09-13T11:25:18.903083" elapsed="42.412756"/>
 </suite>
-<status status="PASS" start="2024-09-11T18:17:27.860574" elapsed="38.115174"/>
+<status status="PASS" start="2024-09-13T11:25:18.898081" elapsed="42.420750"/>
 </suite>
-<status status="PASS" start="2024-09-11T18:17:27.829308" elapsed="38.150145"/>
+<status status="PASS" start="2024-09-13T11:25:18.870134" elapsed="42.451687"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="SmartTracker Autotests">SmartTracker Autotests</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1" name="Tests">SmartTracker Autotests.Tests</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Main Page">SmartTracker Autotests.Tests.Main Page</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="Main Page">SmartTracker Autotests.Tests.Main Page.Main Page</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="SmartTracker Autotests">SmartTracker Autotests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">SmartTracker Autotests.Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Profile">SmartTracker Autotests.Tests.Profile</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1-s1" name="Authorization">SmartTracker Autotests.Tests.Profile.Authorization</stat>
 </suite>
 </statistics>
 <errors>
