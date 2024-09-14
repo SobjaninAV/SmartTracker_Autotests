@@ -2,21 +2,12 @@
 Documentation    Кейворды для главного экрана
 Resource    ../common.resource    # robotcode: ignore
 
-*** Variables ***
-${SECOND_NAME}    random
-${FIRST_NAME}    random
-${PATRONYMIC}    random
 
 *** Keywords ***
 Precondition: Main Page
     [Documentation]    Предусловие: на главном экране
     common.Launch App With Notifications And Geo
     common.Passing to the main page
-
-Generate Random Variables
-    ${SECOND_NAME}=    Evaluate    random.choice(["Иванов", "Петров", "Сидоров", "Кузнецов", "Смирнов"])    modules=random
-    ${FIRST_NAME}=    Evaluate    random.choice(["Александр", "Максим", "Иван", "Дмитрий", "Егор"])    modules=random
-    ${PATRONYMIC}=    Evaluate    random.choice(["Александрович", "Максимович", "Иванович", "Дмитриевич", "Егорович"])    modules=random
 
 Open orders in work
     Wait Until Element Is Visible    ${ORDERS_IN_WORK_LAYOUT}
@@ -29,3 +20,17 @@ Open new orders
 Open main menu
     Wait Until Element Is Visible    ${MAIN_MENU_BTN}
     Click Element    ${MAIN_MENU_BTN}
+
+Scroll Until Order To Accept Is Found
+    [Documentation]    Скролим, пока не найдем нужный заказ
+
+    ${is_element_present}=    Set Variable    ${False}
+    WHILE  not ${is_element_present}
+        ${is_element_present}=    Run Keyword And Return Status    
+        ...    Wait Until Element Is Visible    ${ORDER_TO_ACCEPT}    timeout=0.5s
+        IF  ${is_element_present}
+            BREAK
+        ELSE
+            Swipe By Percent    50    80    50    20    500
+        END
+    END
