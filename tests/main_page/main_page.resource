@@ -34,3 +34,12 @@ Scroll Until Order To Accept Is Found
             Swipe By Percent    50    80    50    20    500
         END
     END
+
+Check New Order Status
+    ${actual_value}=    Get Element Attribute    ${ORDER_STATUS_FLD}    text
+    Should Be Equal    ${actual_value}    Новый заказ
+
+Check Taken Order Status
+    ${actual_value}=    Get Element Attribute    ${ORDER_STATUS_FLD}    text
+    Should Be Equal    ${actual_value}    В работе
+    

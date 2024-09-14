@@ -11,5 +11,6 @@ Open orders in work
 Scroll To Find Order To Accept
     Scroll Until Order To Accept Is Found
 
-#Open Accepted Order
-    #Click Element    ${ORDER_TO_ACCEPT}
+Open Accepted Order
+    Click Element    ${ORDER_TO_ACCEPT}
+    Check Taken Order Status

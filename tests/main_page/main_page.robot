@@ -13,3 +13,12 @@ Scroll To Find Order To Accept
 
 Open Order To Accept
     Click Element    ${ORDER_TO_ACCEPT}
+
+Take Order
+    Check New Order Status
+    Click Element    ${TAKE_ORDER_BTN}
+    Click Element    ${DO_NOT_CONFIRM_BTN}
+    Check New Order Status
+    Click Element    ${TAKE_ORDER_BTN}
+    Click Element    ${CONFIRM_BTN}
+    Check Taken Order Status
