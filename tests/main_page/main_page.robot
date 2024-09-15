@@ -22,3 +22,5 @@ Take Order
     Click Element    ${TAKE_ORDER_BTN}
     Click Element    ${CONFIRM_BTN}
     Check Taken Order Status
+    Close Application
+    
