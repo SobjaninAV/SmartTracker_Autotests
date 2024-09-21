@@ -9,3 +9,4 @@ Resource    ../core/Locators/permisions_lc.resource
 Resource    ../core/Locators/authorization_lc.resource
 Resource    ../core/Locators/main_page_lc.resource
 Resource    ../core/Locators/order_lc.resource
+Resource    ../core/Locators/main_menu.resource
