@@ -4,9 +4,12 @@ Resource    ../core/all.resource
 Resource    onboarding/onboarding.resource
 Resource    profile/authorization.resource
 Resource    main_page/main_page.resource
+Resource    completed_order/completed_order.resource
 
 
 *** Variables ***
+${COMPLETED_ORDER}    ${ORDER_TO_ACCEPT}
+${COMPLETED_ORDER_NMBR}    ${ORDER_NMBR_TO_ACCEPT}
 ${SECOND_NAME}    random
 ${FIRST_NAME}    random
 ${PATRONYMIC}    random

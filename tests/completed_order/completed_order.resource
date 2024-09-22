@@ -17,7 +17,7 @@ Scroll Until Completed Order Is Found
     ${is_element_present}=    Set Variable    ${False}
     WHILE  not ${is_element_present}
         ${is_element_present}=    Run Keyword And Return Status    
-        ...    Wait Until Element Is Visible    ${ORDER_TO_ACCEPT}    timeout=0.5s
+        ...    Wait Until Element Is Visible    ${COMPLETED_ORDER}    timeout=0.5s
         IF  ${is_element_present}
             BREAK
         ELSE
