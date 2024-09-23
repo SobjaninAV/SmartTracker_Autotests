@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Локаторы для главного экрана
+Documentation    Локаторы главного меню
 Resource    ../../variables.resource
 
 *** Variables ***

@@ -2,7 +2,7 @@
 Documentation    Подключение ресурсов
 Resource    ../core/all.resource
 Resource    onboarding/onboarding.resource
-Resource    profile/authorization.resource
+Resource    authorization/authorization.resource
 Resource    main_page/main_page.resource
 Resource    completed_order/completed_order.resource
 
@@ -10,9 +10,13 @@ Resource    completed_order/completed_order.resource
 *** Variables ***
 ${COMPLETED_ORDER}    ${ORDER_TO_ACCEPT}
 ${COMPLETED_ORDER_NMBR}    ${ORDER_NMBR_TO_ACCEPT}
-${SECOND_NAME}    random
-${FIRST_NAME}    random
-${PATRONYMIC}    random
+${SECOND_NAME}    Максимов
+${FIRST_NAME}    Максим
+${PATRONYMIC}    Максимович
+${NEW_SECOND_NAME}    Сидоров
+${NEW_FIRST_NAME}    Иван
+${NEW_PATRONYMIC}    Александрович
+${NEW_PASPORT}    5428946215
 
 
 *** Keywords ***
@@ -50,8 +54,3 @@ Passing to the main page
     authorization.Input Pasport Password And Authorize
     authorization.Allow Geo At The Background Mode
     authorization.Pass Second Education
-
-Generate Random Variables
-    ${SECOND_NAME}=    Evaluate    random.choice(["Иванов", "Петров", "Сидоров", "Кузнецов", "Смирнов"])    modules=random
-    ${FIRST_NAME}=    Evaluate    random.choice(["Александр", "Максим", "Иван", "Дмитрий", "Егор"])    modules=random
-    ${PATRONYMIC}=    Evaluate    random.choice(["Александрович", "Максимович", "Иванович", "Дмитриевич", "Егорович"])    modules=random

@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Локаторы экрана авторизации
+Documentation    Локаторы экрана заказа
 
 
 *** Variables ***

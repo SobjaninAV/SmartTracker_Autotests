@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation    Ресурсы и предусловия
 Resource    ../main_page/main_page.resource
-Resource    completed_order.resource
 Suite Setup    Precondition: Main Page
 
 
@@ -11,9 +10,9 @@ Open completed orders
 
 Scroll Until Completed Order Is Found
     Scroll Until Completed Order Is Found
-    Click Element    ${COMPLETED_ORDER}
 
-Open Compted Order
+Open Completed Order
+    Click Element    ${COMPLETED_ORDER}
     Wait Until Element Is Visible    //android.widget.TextView[@text="${COMPLETED_ORDER_NMBR}"]
 
 Check Completed Order Status

@@ -36,10 +36,12 @@ Scroll Until Order To Accept Is Found
     END
 
 Check New Order Status
+    Sleep    time_=3s
     ${actual_value}=    Get Element Attribute    ${ORDER_STATUS_FLD}    text
     Should Be Equal    ${actual_value}    Новый заказ
 
 Check Taken Order Status
+    Sleep    3s
     ${actual_value}=    Get Element Attribute    ${ORDER_STATUS_FLD}    text
     Should Be Equal    ${actual_value}    В работе
     
