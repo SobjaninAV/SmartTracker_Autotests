@@ -3,11 +3,6 @@ Documentation    Кейворды для экрана авторизации
 Resource    ../common.resource    # robotcode: ignore
 
 
-*** Variables ***
-${INVALID_PASPORT}    5719946395
-${INVALID_PASSWORD}    1234567
-
-
 *** Keywords ***
 Precondition: At Authorizathion Form
     [Documentation]    Предусловие: на экране авторизации

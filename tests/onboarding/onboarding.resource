@@ -14,10 +14,11 @@ Allow Location And Notifications
 Turn On Geolocation
     [Documentation]    Включение геолокации
     Sleep    time_=1
-    ${element_present}=    Run Keyword And Return Status    Element Should Be Visible    ${GEOLCTN_TURN_ON_SCRN}
+    ${element_present}=    Run Keyword And Return Status    Element Should Be Visible    ${GEOLOCATION_TURN_ON_SCRN}
     IF    ${element_present}    Click Element    ${GEOLOCATION_TURN_ON_SWCH}
     IF    ${element_present}    Go Back
-    ${element_present}=    Run Keyword And Return Status    Page Should Not Contain Element    ${GEOLCTN_TURN_ON_SCRN}
+    ${element_present}=    Run Keyword And Return Status
+    ...    Page Should Not Contain Element    ${GEOLOCATION_TURN_ON_SCRN}
     IF    ${element_present}    No Operation
 
 Passing Instructions

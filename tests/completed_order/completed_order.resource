@@ -23,8 +23,3 @@ Scroll Until Completed Order Is Found
             Swipe By Percent    50    80    50    20    400
         END
     END
-
-Check Completed Order Status
-    [Documentation]    Проверить статус завершенного заказа
-    ${actual_value}=    Get Element Attribute    ${ORDER_STATUS_FLD}    text
-    Should Be Equal    ${actual_value}    Завершенный заказ

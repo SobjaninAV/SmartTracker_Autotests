@@ -12,3 +12,4 @@ ${EDIT_FIRST_NAME_FLD}           com.b2b_logist.smarttracker.develop:id/etEditPr
 ${EDIT_SECOND_NAME_FLD}          com.b2b_logist.smarttracker.develop:id/etEditProfileSurname
 ${EDIT_PATRONYMIC_FLD}           com.b2b_logist.smarttracker.develop:id/etEditProfileSecondName
 ${EDIT_PASPORT_FLD}              com.b2b_logist.smarttracker.develop:id/etEditProfilePassport
+${CHANGE_PASSWORD_BTN}           com.b2b_logist.smarttracker.develop:id/btnEditProfileChangePassword

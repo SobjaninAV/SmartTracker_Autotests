@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation    Ресурсы и предусловия
-Resource    ../main_page/main_page.resource
 Resource    profile.resource
 Suite Setup    Precondition: Main Page
 
@@ -37,16 +36,7 @@ Check Main Menu New FIO
 
 Restore Profile
     [Documentation]    Восстанавливаем данные профиля к первоначальным ФИО и номеру паспорта
-    Click Element    ${EDIT_PROFILE_BTN}
-    Clear Text    ${EDIT_FIRST_NAME_FLD}
-    Clear Text    ${EDIT_SECOND_NAME_FLD}
-    Clear Text    ${EDIT_PATRONYMIC_FLD}
-    Clear Text    ${EDIT_PASPORT_FLD}
-    Input Text    ${EDIT_PASPORT_FLD}        text=%{VALID_PASPORT}
-    Input Text    ${EDIT_FIRST_NAME_FLD}     text=${FIRST_NAME}
-    Input Text    ${EDIT_SECOND_NAME_FLD}    text=${SECOND_NAME}
-    Input Text    ${EDIT_PATRONYMIC_FLD}     text=${PATRONYMIC}
-    Click Element    ${SAVE_PROFILE_BTN}
+    Restore Profile
 
 Check Restored FIO
     [Documentation]    Проверить восстановленные ФИО на странице профиля

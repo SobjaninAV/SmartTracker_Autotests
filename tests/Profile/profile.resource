@@ -4,11 +4,6 @@ Resource    ../common.resource    # robotcode: ignore
 
 
 *** Keywords ***
-Open Profile
-    [Documentation]    Открыть страницу профиля
-    Click Element    ${MAIN_MENU_BTN}
-    Click Element    ${PROFILE_BTN}
-
 Check Actual FIO
     [Documentation]    Проверить актуалные ФИО на странице профиля
     ${actual_value}=    Get Element Attribute    ${FIO_FLD}    text
@@ -56,3 +51,16 @@ Tap On Right Side
     ${y}=       Evaluate    ${height} * 0.5
     ${tap_position}=    Create List    ${x}    ${y}
     Tap With Positions    100    ${tap_position}
+
+Restore Profile
+    [Documentation]    Восстанавливаем данные профиля к первоначальным ФИО и номеру паспорта
+    Click Element    ${EDIT_PROFILE_BTN}
+    Clear Text    ${EDIT_FIRST_NAME_FLD}
+    Clear Text    ${EDIT_SECOND_NAME_FLD}
+    Clear Text    ${EDIT_PATRONYMIC_FLD}
+    Clear Text    ${EDIT_PASPORT_FLD}
+    Input Text    ${EDIT_PASPORT_FLD}        text=%{VALID_PASPORT}
+    Input Text    ${EDIT_FIRST_NAME_FLD}     text=${FIRST_NAME}
+    Input Text    ${EDIT_SECOND_NAME_FLD}    text=${SECOND_NAME}
+    Input Text    ${EDIT_PATRONYMIC_FLD}     text=${PATRONYMIC}
+    Click Element    ${SAVE_PROFILE_BTN}

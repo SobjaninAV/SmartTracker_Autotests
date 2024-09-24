@@ -5,6 +5,10 @@ Resource    onboarding/onboarding.resource
 Resource    authorization/authorization.resource
 Resource    main_page/main_page.resource
 Resource    completed_order/completed_order.resource
+Resource    restore_password/restore_password.resource
+Resource    profile/profile.resource
+Resource    password_change/password_change.resource
+Resource    order_in_work/order_in_work.resource
 
 
 *** Variables ***
@@ -17,6 +21,7 @@ ${NEW_SECOND_NAME}    Сидоров
 ${NEW_FIRST_NAME}    Иван
 ${NEW_PATRONYMIC}    Александрович
 ${NEW_PASPORT}    5428946215
+${NEW_PASSWORD}    654321
 
 
 *** Keywords ***
@@ -54,3 +59,8 @@ Passing To The Main Page
     authorization.Input Pasport Password And Authorize
     authorization.Allow Geo At The Background Mode
     authorization.Pass Second Education
+
+Open Profile
+    [Documentation]    Открыть страницу профиля
+    Click Element    ${MAIN_MENU_BTN}
+    Click Element    ${PROFILE_BTN}

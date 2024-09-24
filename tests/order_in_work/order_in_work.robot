@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation    Ресурсы и предусловия
-Resource    ../main_page/main_page.resource
 Resource    order_in_work.resource
 Suite Setup    Precondition: Main Page
 
@@ -28,5 +27,5 @@ Load The Truck
 Complete Order
     [Documentation]    Сменить статус заявки на "Завершен"
     Complete Order
-    order_in_work.Check Completed Order Status
+    Check Completed Order Status
     Close Application

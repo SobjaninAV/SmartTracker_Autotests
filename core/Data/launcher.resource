@@ -1,17 +1,6 @@
 *** Settings ***
+Documentation    Подключаем библиотеку Appium
 Library    AppiumLibrary
-
-*** Keywords ***  
-Open app  
-    Open Application    
-    ...    remote_url=${CONNECTION_URL}
-    ...    automationName=${AUTOMATION_NAME}    
-    ...    platformName=${PLATFORM_NAME}    
-    ...    platformVersion=${PLATFORM_VERSION}    
-    ...    deviceName=${DEVICE_NAME}    
-    ...    udid=${UDID}    
-    ...    appPackage=${APP_PACKAGE}    
-    ...    appActivity=${APP_ACTIVITY}
 
 
 *** Variables ***
@@ -23,3 +12,17 @@ ${DEVICE_NAME}        NothingPhone
 ${UDID}            670b4d70           # Можно найти через adb devices
 ${APP_PACKAGE}     com.b2b_logist.smarttracker.develop
 ${APP_ACTIVITY}    com.b2b_logist.smarttracker.presentation.ui.MainActivity
+
+
+*** Keywords ***
+Open App
+    [Documentation]    Запустить приложение
+    Open Application
+    ...    remote_url=${CONNECTION_URL}
+    ...    automationName=${AUTOMATION_NAME}
+    ...    platformName=${PLATFORM_NAME}
+    ...    platformVersion=${PLATFORM_VERSION}
+    ...    deviceName=${DEVICE_NAME}
+    ...    udid=${UDID}
+    ...    appPackage=${APP_PACKAGE}
+    ...    appActivity=${APP_ACTIVITY}
