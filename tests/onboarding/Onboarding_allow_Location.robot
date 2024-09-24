@@ -17,13 +17,9 @@ Allow_Location_And_Notifications
 
 Turn On Geolocation
     [Documentation]    Включение геолокации
-    
     Turn On Geolocation
 
 Passing_Instructions
     [Documentation]    Прохождение слайдов с обучением работе в приложении
 
     Pass Instructions
-
-# Wrong_Authorization
- #   [Documentation]    Авторизация c невалидными данными

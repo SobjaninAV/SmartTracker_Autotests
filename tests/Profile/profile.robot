@@ -6,45 +6,37 @@ Suite Setup    Precondition: Main Page
 
 
 *** Test Cases ***
-Open profile
-    Click Element    ${MAIN_MENU_BTN}
-    Click Element    ${PROFILE_BTN}
+Open Profile
+    [Documentation]    Открыть страницу профиля
+    Open Profile
 
-Check actual FIO
-    ${actual_value}=    Get Element Attribute    ${FIO_FLD}    text
-    Should Be Equal    ${actual_value}    ${SECOND_NAME} ${FIRST_NAME} ${PATRONYMIC}
-    
-Check actual pasport number
-    ${actual_value}=    Get Element Attribute    ${PROFILE_PASPORT_FLD}    text
-    Should Be Equal    ${actual_value}    %{VALID_PASPORT}
-    
+Check Actual FIO
+    [Documentation]    Проверить актуалные ФИО на странице профиля
+    Check Actual FIO
+
+Check Actual Pasport Number
+    [Documentation]    Проверить актуалный номер паспорта на странице профиля
+    Check Actual Pasport Number
+
 Edit Profile
-    Click Element    ${EDIT_PROFILE_BTN}
-    Clear Text    ${EDIT_FIRST_NAME_FLD}
-    Clear Text    ${EDIT_SECOND_NAME_FLD}
-    Clear Text    ${EDIT_PATRONYMIC_FLD}
-    Clear Text    ${EDIT_PASPORT_FLD}
-    Input Text    ${EDIT_PASPORT_FLD}        text=${NEW_PASPORT}
-    Input Text    ${EDIT_FIRST_NAME_FLD}     text=${NEW_FIRST_NAME}
-    Input Text    ${EDIT_SECOND_NAME_FLD}    text=${NEW_SECOND_NAME}
-    Input Text    ${EDIT_PATRONYMIC_FLD}     text=${NEW_PATRONYMIC}
-    Click Element    ${SAVE_PROFILE_BTN}
+    [Documentation]    Редактируем профиль
+    Edit Profile
 
 Check New FIO
-    ${actual_value}=    Get Element Attribute    ${FIO_FLD}    text
-    Should Be Equal    ${actual_value}    ${NEW_SECOND_NAME} ${NEW_FIRST_NAME} ${NEW_PATRONYMIC}
+    [Documentation]    Проверить новые ФИО на странице профиля
+    Check New FIO
 
-Check new pasport number
-    ${actual_value}=    Get Element Attribute    ${PROFILE_PASPORT_FLD}    text
-    Should Be Equal    ${actual_value}    ${NEW_PASPORT}
+Check New Pasport Number
+    [Documentation]    Проверить актуалный номер паспорта на странице профиля
+    Check New Pasport Number
 
-Check main menu new FIO
-    Click Element    ${MAIN_MENU_BTN}
-    ${actual_value}=    Get Element Attribute    ${MAIN_MENU_FIO}    text
-    Should Be Equal    ${actual_value}    ${NEW_SECOND_NAME} ${NEW_FIRST_NAME} ${NEW_PATRONYMIC}
-    Tap On Left Side  
+Check Main Menu New FIO
+    [Documentation]    Проверить новые ФИО на странице профиля
+    Check Main Menu New FIO
+    Tap On Right Side
 
 Restore Profile
+    [Documentation]    Восстанавливаем данные профиля к первоначальным ФИО и номеру паспорта
     Click Element    ${EDIT_PROFILE_BTN}
     Clear Text    ${EDIT_FIRST_NAME_FLD}
     Clear Text    ${EDIT_SECOND_NAME_FLD}
@@ -57,14 +49,17 @@ Restore Profile
     Click Element    ${SAVE_PROFILE_BTN}
 
 Check Restored FIO
+    [Documentation]    Проверить восстановленные ФИО на странице профиля
     ${actual_value}=    Get Element Attribute    ${FIO_FLD}    text
     Should Be Equal    ${actual_value}    ${SECOND_NAME} ${FIRST_NAME} ${PATRONYMIC}
 
 Check Restored pasport number
+    [Documentation]    Проверить восстановленный номер паспорта на странице профиля
     ${actual_value}=    Get Element Attribute    ${PROFILE_PASPORT_FLD}    text
     Should Be Equal    ${actual_value}    %{VALID_PASPORT}
 
 Check main menu Restored FIO
+    [Documentation]    Проверить восстановленные ФИО на странице профиля
     Click Element    ${MAIN_MENU_BTN}
     ${actual_value}=    Get Element Attribute    ${MAIN_MENU_FIO}    text
     Should Be Equal    ${actual_value}    ${SECOND_NAME} ${FIRST_NAME} ${PATRONYMIC}

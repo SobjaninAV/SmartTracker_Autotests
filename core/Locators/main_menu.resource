@@ -2,6 +2,7 @@
 Documentation    Локаторы главного меню
 Resource    ../../variables.resource
 
+
 *** Variables ***
 ${MAIN_MENU_AVATAR_PIC}               com.b2b_logist.smarttracker.develop:id/ivMainAvatar
 ${MAIN_MENU_FIO}                      com.b2b_logist.smarttracker.develop:id/tvMainName

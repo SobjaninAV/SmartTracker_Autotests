@@ -25,7 +25,7 @@ Launch App With Notifications And Geo
 
     Launch App
     onboarding.Allow Location And Notifications
-    onboarding.Turn_On_Geolocation
+    onboarding.Turn On Geolocation
     onboarding.Passing Instructions
 
 Launch App
@@ -49,7 +49,7 @@ Suite Teardown
 
     Pass Execution    message=Прогон завершен
 
-Passing to the main page
+Passing To The Main Page
     [Documentation]    Главный экран после первичной авторизации
     authorization.Input Pasport Password And Authorize
     authorization.Allow Geo At The Background Mode

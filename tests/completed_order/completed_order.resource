@@ -4,7 +4,7 @@ Resource    ../common.resource    # robotcode: ignore
 
 
 *** Keywords ***
-Open completed orders
+Open Completed Orders
     [Documentation]    Открываем историю заказов
     Click Element    ${MAIN_MENU_BTN}
     Wait Until Element Is Visible    ${COMPLETED_ORDERS_BTN}
@@ -12,11 +12,10 @@ Open completed orders
     Wait Until Element Is Visible    //android.widget.TextView[@text="История заказов"]
 
 Scroll Until Completed Order Is Found
-    [Documentation]    Скролим, пока не найдем нужный заказ
-
+    [Documentation]    Скролим, пока не найдем нужный завершенный заказ
     ${is_element_present}=    Set Variable    ${False}
     WHILE  not ${is_element_present}
-        ${is_element_present}=    Run Keyword And Return Status    
+        ${is_element_present}=    Run Keyword And Return Status
         ...    Wait Until Element Is Visible    ${COMPLETED_ORDER}    timeout=0.5s
         IF  ${is_element_present}
             BREAK
@@ -26,5 +25,6 @@ Scroll Until Completed Order Is Found
     END
 
 Check Completed Order Status
+    [Documentation]    Проверить статус завершенного заказа
     ${actual_value}=    Get Element Attribute    ${ORDER_STATUS_FLD}    text
     Should Be Equal    ${actual_value}    Завершенный заказ
