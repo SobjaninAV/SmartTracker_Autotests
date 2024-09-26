@@ -4,4 +4,4 @@ Documentation    Номера заказов для принятия и отка
 
 *** Variables ***
 ${ORDER_NMBR_TO_ACCEPT}    №0000000406
-${ORDER_NMBR_TO_REJECT}    №0000000443
+${ORDER_NMBR_TO_REJECT}    №0000000583
