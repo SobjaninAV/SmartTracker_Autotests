@@ -24,8 +24,20 @@ Load The Truck
     Load The Truck
     Check Loaded Order Status
 
+Check Route And Added Pics Pages
+     [Documentation]    Проверить вкладки "Маршрут" и "Фото"
+     Check Route And Added Pics Pages
+
+Check Pics Filters
+    [Documentation]    Проверить отборы на вкладке "Фото"
+    Check TTN Filter
+    Check Route List Filter
+    Check Problems Filter
+    Check All Filter
+
 Complete Order
     [Documentation]    Сменить статус заявки на "Завершен"
+    Click Element    ${ORDR_GENERAL_PAGE}
     Complete Order
     Check Completed Order Status
     Close Application
