@@ -14,9 +14,9 @@ Resource    order_in_work/order_in_work.resource
 *** Variables ***
 ${COMPLETED_ORDER}    ${ORDER_TO_ACCEPT}
 ${COMPLETED_ORDER_NMBR}    ${ORDER_NMBR_TO_ACCEPT}
-${SECOND_NAME}    Максимов
-${FIRST_NAME}    Максим
-${PATRONYMIC}    Максимович
+${SECOND_NAME}    Семенов
+${FIRST_NAME}    Семен
+${PATRONYMIC}    Семенович
 ${NEW_SECOND_NAME}    Сидоров
 ${NEW_FIRST_NAME}    Иван
 ${NEW_PATRONYMIC}    Александрович

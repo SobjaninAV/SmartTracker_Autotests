@@ -19,11 +19,5 @@ Open Order To Accept
 
 Take Order
     [Documentation]    Взять заявку в работу
-    Check New Order Status
-    Click Element    ${TAKE_ORDER_BTN}
-    Click Element    ${DO_NOT_CONFIRM_BTN}
-    Check New Order Status
-    Click Element    ${TAKE_ORDER_BTN}
-    Click Element    ${CONFIRM_BTN}
-    Check Taken Order Status
+    Take Order
     Close Application

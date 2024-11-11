@@ -1,5 +1,15 @@
+from appium.webdriver.appium_service import AppiumService
 import subprocess
 
+def start_appium():
+    service = AppiumService()
+    service.start()
+    return service
+
+if __name__ == "__main__":
+    service = start_appium()
+    print("Appium сервер запущен")
+    
 test_files = [
     'tests/main_page/main_page.robot',
     'tests/order_in_work/order_in_work.robot',
@@ -14,3 +24,6 @@ for test in test_files:
     if result.returncode != 0:
         print(f"Тест {test} завершился с ошибкой.")
         break
+
+service.stop()
+print("Appium сервер остановлен")

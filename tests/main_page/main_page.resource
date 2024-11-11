@@ -48,3 +48,15 @@ Check Taken Order Status
     Sleep    3s
     ${actual_value}=    Get Element Attribute    ${ORDER_STATUS_FLD}    text
     Should Be Equal    ${actual_value}    В работе
+
+Take Order
+    [Documentation]    Взять заявку в работу
+    Check New Order Status
+    Click Element    ${TAKE_ORDER_BTN}
+    Wait Until Element Is Visible    ${DO_NOT_CONFIRM_BTN}
+    Click Element    ${DO_NOT_CONFIRM_BTN}
+    Check New Order Status
+    Click Element    ${TAKE_ORDER_BTN}
+    Wait Until Element Is Visible    ${CONFIRM_BTN}
+    Click Element    ${CONFIRM_BTN}
+    Check Taken Order Status
