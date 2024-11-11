@@ -16,4 +16,4 @@ Input New Password And Authorize
 Input New And Old Password
     [Documentation]    Заполнить старый и новый пароль
     Input Text    ${OLD_PASSWORD_FLD}    text=${NEW_PASSWORD}
-    Input Text    ${NEW_PASSWORD_FLD}    text=&=${VALID_PASSWORD}
+    Input Text    ${NEW_PASSWORD_FLD}    text=${VALID_PASSWORD}
