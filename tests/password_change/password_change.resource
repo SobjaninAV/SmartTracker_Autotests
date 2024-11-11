@@ -14,5 +14,6 @@ Open Change Password Page
 
 Input Old And New Password
     [Documentation]    Заполнить старый и новый пароль
-    Input Text    ${OLD_PASSWORD_FLD}    text=%{VALID_PASSWORD}
+    Wait Until Element Is Visible    ${OLD_PASSWORD_FLD}
+    Input Text    ${OLD_PASSWORD_FLD}    text=${VALID_PASSWORD}
     Input Text    ${NEW_PASSWORD_FLD}    text=${NEW_PASSWORD}

@@ -6,10 +6,14 @@ Resource    ../common.resource    # robotcode: ignore
 *** Keywords ***
 Load The Truck
     [Documentation]    Сменить статус заявки на "Погружен"
-    Click Element    ${LOAD_CAR_BTN}
-    Click Element    ${DO_NOT_CONFIRM_BTN}
-    Click Element    ${LOAD_CAR_BTN}
-    Click Element    ${CONFIRM_BTN}
+    Wait Until Element Is Visible    ${LOAD_CAR_BTN}
+    Click Element                    ${LOAD_CAR_BTN}
+    Wait Until Element Is Visible    ${DO_NOT_CONFIRM_BTN}
+    Click Element                    ${DO_NOT_CONFIRM_BTN}
+    Wait Until Element Is Visible    ${LOAD_CAR_BTN}
+    Click Element                    ${LOAD_CAR_BTN}
+    Wait Until Element Is Visible    ${CONFIRM_BTN}
+    Click Element                    ${CONFIRM_BTN}
 
 Check Loaded Order Status
     [Documentation]    Проверрить статус "Погрузился"

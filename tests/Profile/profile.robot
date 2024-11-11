@@ -40,17 +40,13 @@ Restore Profile
 
 Check Restored FIO
     [Documentation]    Проверить восстановленные ФИО на странице профиля
-    ${actual_value}=    Get Element Attribute    ${FIO_FLD}    text
-    Should Be Equal    ${actual_value}    ${SECOND_NAME} ${FIRST_NAME} ${PATRONYMIC}
+    Check Restored FIO
 
 Check Restored pasport number
     [Documentation]    Проверить восстановленный номер паспорта на странице профиля
-    ${actual_value}=    Get Element Attribute    ${PROFILE_PASPORT_FLD}    text
-    Should Be Equal    ${actual_value}    %{VALID_PASPORT}
+    Check Restored pasport number
 
 Check main menu Restored FIO
     [Documentation]    Проверить восстановленные ФИО на странице профиля
-    Click Element    ${MAIN_MENU_BTN}
-    ${actual_value}=    Get Element Attribute    ${MAIN_MENU_FIO}    text
-    Should Be Equal    ${actual_value}    ${SECOND_NAME} ${FIRST_NAME} ${PATRONYMIC}
+    Check main menu Restored FIO
     Close Application

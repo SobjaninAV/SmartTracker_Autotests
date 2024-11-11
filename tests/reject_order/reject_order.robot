@@ -18,12 +18,14 @@ Open Order To Accept
     Click Element    ${ORDER_TO_REJECT}
 
 Take Order
-    [Documentation]    Взять заявку в работу
+    [Documentation]    Отказаться от заказа
     Check New Order Status
     Click Element    ${REJECT_ORDER_BTN}
+    Wait Until Element Is Visible    ${DO_NOT_CONFIRM_BTN}
     Click Element    ${DO_NOT_CONFIRM_BTN}
     Check New Order Status
     Click Element    ${REJECT_ORDER_BTN}
+    Wait Until Element Is Visible    ${CONFIRM_BTN}
     Click Element    ${CONFIRM_BTN}
     Check Rejected Order Status
     Close Application
