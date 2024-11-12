@@ -4,14 +4,14 @@ Library    AppiumLibrary
 
 
 *** Variables ***
-${CONNECTION_URL}     http://127.0.0.1:4723    # Адрес сервера
-${AUTOMATION_NAME}    UiAutomator2    # Драйвер автоматизации
+${CONNECTION_URL}     http://127.0.0.1:4723       # Адрес сервера
+${AUTOMATION_NAME}    UiAutomator2                # Драйвер автоматизации
 ${PLATFORM_NAME}      Android
 ${PLATFORM_VERSION}   13
 ${DEVICE_NAME}        NothingPhone
-${UDID}            670b4d70           # Можно найти через adb devices
-${APP_PACKAGE}     com.b2b_logist.smarttracker.develop
-${APP_ACTIVITY}    com.b2b_logist.smarttracker.presentation.ui.MainActivity
+${UDID}               670b4d70                    # Можно найти через adb devices
+${APP_PACKAGE}        com.b2b_logist.smarttracker.develop
+${APP_ACTIVITY}       com.b2b_logist.smarttracker.presentation.ui.MainActivity
 
 
 *** Keywords ***

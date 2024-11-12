@@ -17,14 +17,14 @@ Check Actual Pasport Number
 Edit Profile
     [Documentation]    Редактируем профиль
     Click Element    ${EDIT_PROFILE_BTN}
-    Clear Text    ${EDIT_FIRST_NAME_FLD}
-    Clear Text    ${EDIT_SECOND_NAME_FLD}
-    Clear Text    ${EDIT_PATRONYMIC_FLD}
-    Clear Text    ${EDIT_PASPORT_FLD}
-    Input Text    ${EDIT_PASPORT_FLD}        text=${NEW_PASPORT}
-    Input Text    ${EDIT_FIRST_NAME_FLD}     text=${NEW_FIRST_NAME}
-    Input Text    ${EDIT_SECOND_NAME_FLD}    text=${NEW_SECOND_NAME}
-    Input Text    ${EDIT_PATRONYMIC_FLD}     text=${NEW_PATRONYMIC}
+    Clear Text       ${EDIT_FIRST_NAME_FLD}
+    Clear Text       ${EDIT_SECOND_NAME_FLD}
+    Clear Text       ${EDIT_PATRONYMIC_FLD}
+    Clear Text       ${EDIT_PASPORT_FLD}
+    Input Text       ${EDIT_PASPORT_FLD}        text=${NEW_PASPORT}
+    Input Text       ${EDIT_FIRST_NAME_FLD}     text=${NEW_FIRST_NAME}
+    Input Text       ${EDIT_SECOND_NAME_FLD}    text=${NEW_SECOND_NAME}
+    Input Text       ${EDIT_PATRONYMIC_FLD}     text=${NEW_PATRONYMIC}
     Click Element    ${SAVE_PROFILE_BTN}
 
 Check New FIO
@@ -73,12 +73,12 @@ Check main menu Restored FIO
 Restore Profile
     [Documentation]    Восстанавливаем данные профиля к первоначальным ФИО и номеру паспорта
     Click Element    ${EDIT_PROFILE_BTN}
-    Clear Text    ${EDIT_FIRST_NAME_FLD}
-    Clear Text    ${EDIT_SECOND_NAME_FLD}
-    Clear Text    ${EDIT_PATRONYMIC_FLD}
-    Clear Text    ${EDIT_PASPORT_FLD}
-    Input Text    ${EDIT_PASPORT_FLD}        text=${VALID_PASPORT}
-    Input Text    ${EDIT_FIRST_NAME_FLD}     text=${FIRST_NAME}
-    Input Text    ${EDIT_SECOND_NAME_FLD}    text=${SECOND_NAME}
-    Input Text    ${EDIT_PATRONYMIC_FLD}     text=${PATRONYMIC}
+    Clear Text       ${EDIT_FIRST_NAME_FLD}
+    Clear Text       ${EDIT_SECOND_NAME_FLD}
+    Clear Text       ${EDIT_PATRONYMIC_FLD}
+    Clear Text       ${EDIT_PASPORT_FLD}
+    Input Text       ${EDIT_PASPORT_FLD}        text=${VALID_PASPORT}
+    Input Text       ${EDIT_FIRST_NAME_FLD}     text=${FIRST_NAME}
+    Input Text       ${EDIT_SECOND_NAME_FLD}    text=${SECOND_NAME}
+    Input Text       ${EDIT_PATRONYMIC_FLD}     text=${PATRONYMIC}
     Click Element    ${SAVE_PROFILE_BTN}
