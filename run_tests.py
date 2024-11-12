@@ -27,20 +27,20 @@ test_files = [
 i = 0
 for test in test_files:
     i = i + 1
-    result = subprocess.run(['robot', test])
-    output = 'output.xml'
-    report = 'report.html'
-    log = 'log.html'
-    new_folder = (str(i))
-    if not os.path.exists(new_folder):
-        os.makedirs(new_folder)
-    destination1 = os.path.join(new_folder, output)
-    destination2 = os.path.join(new_folder, report)
-    destination3 = os.path.join(new_folder, log)
-    shutil.move(output, destination1)
-    shutil.move(report, destination2)
-    shutil.move(log, destination3)
-    if result.returncode != 0:
+    result = subprocess.run(['robot', test])            #запускаем сценарий
+    output = 'output.xml'                               #файл отчета
+    report = 'report.html'                              #файл отчета
+    log = 'log.html'                                    #файл отчета
+    new_folder = (str("Отчёт " + str(i) + "-й сценарий"))
+    if not os.path.exists(new_folder):                  #создаем папку для отчетов
+        os.makedirs(new_folder)                         #создаем папку для отчетов
+    destination1 = os.path.join(new_folder, output)     #кладем отчеты в отдельную папку
+    destination2 = os.path.join(new_folder, report)     #кладем отчеты в отдельную папку
+    destination3 = os.path.join(new_folder, log)        #кладем отчеты в отдельную папку
+    shutil.move(output, destination1)                   #кладем отчеты в отдельную папку
+    shutil.move(report, destination2)                   #кладем отчеты в отдельную папку
+    shutil.move(log, destination3)                      #кладем отчеты в отдельную папку
+    if result.returncode != 0:                          #останавливаем выполнение сценария в случае ошибки 
         print(f"Тест {test} завершился с ошибкой.")
         break
 
