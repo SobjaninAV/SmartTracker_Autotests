@@ -6,12 +6,12 @@ Resource    ../common.resource    # robotcode: ignore
 *** Keywords ***
 Input New Password And Authorize
     [Documentation]    Заполнение полей пасспорта, пароля и авторизация
-    Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Text    ${PASSPORT_FLD}    text=${VALID_PASPORT}
-    Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Password    ${PASSWORD_FLD}    text=${NEW_PASSWORD}
-    Wait Until Element Is Visible    ${AUTHORIZATION_BTN}
-    Click Element    ${AUTHORIZATION_BTN}
+    Wait Until Element Is Visible     ${PASSPORT_FLD}
+    Input Text                        ${PASSPORT_FLD}    text=${VALID_PASPORT}
+    Wait Until Element Is Visible     ${PASSPORT_FLD}
+    Input Password                    ${PASSWORD_FLD}    text=${NEW_PASSWORD}
+    Wait Until Element Is Visible     ${AUTHORIZATION_BTN}
+    Click Element                     ${AUTHORIZATION_BTN}
 
 Input New And Old Password
     [Documentation]    Заполнить старый и новый пароль

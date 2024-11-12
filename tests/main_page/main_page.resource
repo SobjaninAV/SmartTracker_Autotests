@@ -12,17 +12,17 @@ Precondition: Main Page
 Open Orders In Work
     [Documentation]    Открыть страницу заявок в работе
     Wait Until Element Is Visible    ${ORDERS_IN_WORK_LAYOUT}
-    Click Element    ${ORDERS_IN_WORK_LAYOUT}
+    Click Element                    ${ORDERS_IN_WORK_LAYOUT}
 
 Open New Orders
     [Documentation]    Открыть страницу новых заявок
     Wait Until Element Is Visible    ${NEW_ORDERS_LAYOUT}
-    Click Element    ${NEW_ORDERS_LAYOUT}
+    Click Element                    ${NEW_ORDERS_LAYOUT}
 
 Open Main Menu
     [Documentation]    Открыть главное меню
     Wait Until Element Is Visible    ${MAIN_MENU_BTN}
-    Click Element    ${MAIN_MENU_BTN}
+    Click Element                    ${MAIN_MENU_BTN}
 
 Scroll Until Order To Accept Is Found
     [Documentation]    Скролим, пока не найдем нужный заказ
@@ -52,11 +52,11 @@ Check Taken Order Status
 Take Order
     [Documentation]    Взять заявку в работу
     Check New Order Status
-    Click Element    ${TAKE_ORDER_BTN}
+    Click Element                    ${TAKE_ORDER_BTN}
     Wait Until Element Is Visible    ${DO_NOT_CONFIRM_BTN}
-    Click Element    ${DO_NOT_CONFIRM_BTN}
+    Click Element                    ${DO_NOT_CONFIRM_BTN}
     Check New Order Status
-    Click Element    ${TAKE_ORDER_BTN}
+    Click Element                    ${TAKE_ORDER_BTN}
     Wait Until Element Is Visible    ${CONFIRM_BTN}
-    Click Element    ${CONFIRM_BTN}
+    Click Element                    ${CONFIRM_BTN}
     Check Taken Order Status

@@ -11,18 +11,18 @@ Precondition: At Authorizathion Form
 Input Pasport Password And Authorize
     [Documentation]    Заполнение полей пасспорта, пароля и авторизация
     Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Text    ${PASSPORT_FLD}    text=${VALID_PASPORT}
+    Input Text                       ${PASSPORT_FLD}    text=${VALID_PASPORT}
 
     Wait Until Element Is Visible    ${PASSPORT_FLD}
-    Input Password    ${PASSWORD_FLD}    text=${VALID_PASSWORD}
+    Input Password                   ${PASSWORD_FLD}    text=${VALID_PASSWORD}
 
     Wait Until Element Is Visible    ${AUTHORIZATION_BTN}
-    Click Element    ${AUTHORIZATION_BTN}
+    Click Element                    ${AUTHORIZATION_BTN}
 
 Allow Geo At The Background Mode
     [Documentation]    Разрешение на использование геолокации в фоне
     Wait Until Element Is Visible    ${BACKGROUND_GEO_ACCESS_BTN}
-    Click Element    ${BACKGROUND_GEO_ACCESS_BTN}
+    Click Element                    ${BACKGROUND_GEO_ACCESS_BTN}
 
 Pass Second Education
     [Documentation]    Прохождение обучение работы с заявками

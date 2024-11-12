@@ -6,9 +6,9 @@ Resource    ../common.resource    # robotcode: ignore
 *** Keywords ***
 Open Completed Orders
     [Documentation]    Открываем историю заказов
-    Click Element    ${MAIN_MENU_BTN}
+    Click Element                    ${MAIN_MENU_BTN}
     Wait Until Element Is Visible    ${COMPLETED_ORDERS_BTN}
-    Click Element    ${COMPLETED_ORDERS_BTN}
+    Click Element                    ${COMPLETED_ORDERS_BTN}
     Wait Until Element Is Visible    //android.widget.TextView[@text="История заказов"]
 
 Scroll Until Completed Order Is Found
