@@ -1,10 +1,9 @@
 from appium.webdriver.appium_service import AppiumService
 import subprocess
 import os
-import time
 import shutil
 
-#Запускаем аппиум сервер
+#Запускаем Appium сервер
 def start_appium():
     service = AppiumService()
     service.start()
@@ -45,6 +44,6 @@ for test in test_files:
         print(f"Тест {test} завершился с ошибкой.")
         break
 
-#Останавливаем аппиум сервер
+#Останавливаем Appium сервер
 service.stop()
 print("Appium сервер остановлен")
