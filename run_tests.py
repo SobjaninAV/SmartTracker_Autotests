@@ -16,22 +16,23 @@ if __name__ == "__main__":
 
 #Список сценариев по порядку выполнения    
 test_files = [
-    'tests/authorization/authorization.robot',
-    #'tests/main_page/main_page.robot',
-    #'tests/order_in_work/order_in_work.robot',
-    #'tests/reject_order/reject_order.robot',
-    #'tests/Profile/profile.robot',
-    #'tests/password_change/password_change.robot',
-    #'tests/restore_password/restore_password.robot'
+    'tests/main_page/main_page.robot',
+    'tests/order_in_work/order_in_work.robot',
+    'tests/reject_order/reject_order.robot',
+    'tests/Profile/profile.robot',
+    'tests/password_change/password_change.robot',
+    'tests/restore_password/restore_password.robot'
 ]
 
 #Запускаем сценарии друг за другом
+i = 0
 for test in test_files:
+    i = i + 1
     result = subprocess.run(['robot', test])
     output = 'output.xml'
     report = 'report.html'
     log = 'log.html'
-    new_folder = (str(time.time()))
+    new_folder = (str(i))
     if not os.path.exists(new_folder):
         os.makedirs(new_folder)
     destination1 = os.path.join(new_folder, output)
